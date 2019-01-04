@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\OBJ\</OutputDirectory>
-          <OutputName>Template</OutputName>
+          <OutputName>UART</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -555,6 +555,16 @@
               <FileName>README.TXT</FileName>
               <FileType>5</FileType>
               <FilePath>..\README.TXT</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HARDWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\uart.c</FilePath>
             </File>
           </Files>
         </Group>

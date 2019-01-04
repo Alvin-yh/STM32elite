@@ -1,5 +1,10 @@
 #include "stm32f10x.h"
 
+#define MAX_LENGTH 200
+char cachebuffer[MAX_LENGTH]={0};
+
+uint16_t status_flag_register=0;
+
 void My_USART_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -46,15 +51,7 @@ void My_USART_Init()
     NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
     NVIC_Init(&NVIC_InitStructure);
 }
-void USART1_IRQHandler(void)  //UART interrupt function
-{
-    u8 res;
-    if(USART_GetITStatus(USART1,USART_IT_RXNE))
-    {
-        res=USART_ReceiveData(USART1);
-        USART_SendData(USART1,res);
-    }
-}
+
 
  int main(void)
  {	
